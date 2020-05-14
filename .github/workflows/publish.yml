@@ -11,5 +11,6 @@ jobs:
     steps:
       - uses: sterlingwes/gh-pages-deploy-action@v1.1
         with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}  
           source-directory: dist
           build-command: npm run build
