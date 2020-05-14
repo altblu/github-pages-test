@@ -1,0 +1,15 @@
+name: Github Pages Publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sterlingwes/gh-pages-deploy-action@v1.1
+        with:
+          source-directory: dist
+          build-command: npm run build
